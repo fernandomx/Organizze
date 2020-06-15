@@ -2,7 +2,9 @@ package cursoandroid.example.com.organizze;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
@@ -23,7 +25,7 @@ public class MainActivity extends IntroActivity {
 
         //Desativar botões
         setButtonBackVisible(false);
-        setButtonNextVisible(false);
+        setButtonNextVisible(true);
 
         //Chamada dos slides
         addSlide(new FragmentSlide.Builder()
@@ -44,10 +46,25 @@ public class MainActivity extends IntroActivity {
         addSlide(new FragmentSlide.Builder()
                 .background(android.R.color.white)
                 .fragment(R.layout.intro_4)
-                .canGoForward(false) // não permite avançar pra próximo slide
+                //.canGoForward(false) // não permite avançar pra próximo slide
                 .build());
 
 
+        //tela de cadastro
+        addSlide(new FragmentSlide.Builder()
+                .background(android.R.color.white)
+                .fragment(R.layout.intro_cadastro)
+                .build());
+
+    }
+
+
+    public void bt_Entrar(View view){
+       // startActivity(new Intent(this,));
+
+    }
+
+    public void bt_Cadastrar(View view){
 
     }
 
