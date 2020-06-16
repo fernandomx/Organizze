@@ -9,6 +9,9 @@ import android.view.View;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
+import cursoandroid.example.com.organizze.activity.CadastroActivity;
+import cursoandroid.example.com.organizze.activity.LoginActivity;
+
 public class MainActivity extends IntroActivity {
 
     @Override
@@ -60,11 +63,13 @@ public class MainActivity extends IntroActivity {
 
 
     public void bt_Entrar(View view){
-       // startActivity(new Intent(this,));
+        startActivity(new Intent(this, LoginActivity.class));
+
 
     }
 
     public void bt_Cadastrar(View view){
+        startActivity(new Intent(this, CadastroActivity.class));
 
     }
 
